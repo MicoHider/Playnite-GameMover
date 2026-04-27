@@ -1,7 +1,7 @@
 Id: GameMover_0001-2024-0001-0001
 Name: Game Mover
 Author: Custom
-Version: 1.0.0
+Version: 0.1.0
 Module: GameMover.dll
 Type: GenericPlugin
 Links:
