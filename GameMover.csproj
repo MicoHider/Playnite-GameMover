@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <AssemblyName>GameMover</AssemblyName>
+    <RootNamespace>GameMover</RootNamespace>
+    <Nullable>enable</Nullable>
+    <Platforms>x64</Platforms>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- 
+    Before building, you need to copy the following DLLs from your Playnite installation folder
+    (default: %APPDATA%\Playnite  or  C:\Users\<user>\AppData\Roaming\Playnite) into a 
+    local "lib" folder next to this .csproj:
+      - Playnite.SDK.dll
+  -->
+  <ItemGroup>
+    <Reference Include="Playnite.SDK">
+      <HintPath>lib\Playnite.SDK.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- WPF support for the progress window -->
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xaml" />
+  </ItemGroup>
+
+</Project>
